@@ -17,7 +17,7 @@ onMounted(() => {
 
   watchEffect(() => {
     axis.setOptions({
-      duration: initalValue.value,
+      duration: Number(initalValue.value),
     })
   })
 })
