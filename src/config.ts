@@ -18,6 +18,10 @@ export const StepWidthMap: Record<typeof Steps[number], number[]> = {
 }
 
 export const config: RequiredOptions = {
+  offset: {
+    x: 0,
+    y: 0,
+  },
   width: 500,
   height: 18,
   duration: 10,

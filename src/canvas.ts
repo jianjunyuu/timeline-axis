@@ -2,38 +2,50 @@ import type { DrawOptions, Position, TickLabel, TickStyle } from './type'
 
 export function draw(canvas: HTMLCanvasElement, stepWidth: number, stepSecond: number, options: DrawOptions) {
   clear(canvas)
-  const tickCount = Math.floor(canvas.width / (stepWidth * 10))
+  const { offset } = options
+  const bigStepWidth = stepWidth * 10
+  const addTickCount = Math.floor(offset.x / bigStepWidth)
+  const tickCount = Math.floor(canvas.width / bigStepWidth)
 
-  for (let index = 0; index <= tickCount; index++) {
-    const x = index * stepWidth * 10
-    if (index > 0) {
+  for (let index = addTickCount; index <= tickCount + addTickCount + 1; index++) {
+    const x = index * bigStepWidth - offset.x
+    const afterX = x < 0 ? canvas.width + x : x
+    const afterIndex = x < 0 ? index + tickCount : index
+
+    if (index > 0 && x >= 0) {
       drawLine(
         canvas,
-        x,
+        afterX,
         0,
-        x,
+        afterX,
         options.tick.height,
         options.tick.color,
         options.tick.width,
       )
-      drawTimeLabel(canvas, index * stepSecond, {
-        x: x + options.label.offset.x,
-        y: options.label.offset.y,
-      },
-      options.label.style)
+      drawTimeLabel(
+        canvas,
+        (afterIndex) * stepSecond,
+        {
+          x: afterX + options.label.offset.x,
+          y: options.label.offset.y,
+        },
+        options.label.style,
+      )
     }
 
     for (let k = 1; k < 10; k++) {
       const sX = x + k * stepWidth
-      drawLine(
-        canvas,
-        sX,
-        0,
-        sX,
-        options.smallTick.height,
-        options.smallTick.color,
-        options.smallTick.width,
-      )
+      if (sX >= 0) {
+        drawLine(
+          canvas,
+          sX,
+          0,
+          sX,
+          options.smallTick.height,
+          options.smallTick.color,
+          options.smallTick.width,
+        )
+      }
     }
   }
 }

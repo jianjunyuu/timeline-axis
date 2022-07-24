@@ -51,10 +51,12 @@ export interface Options {
   smallTick?: TickStyle
   // 刻度文案
   label?: TickLabel
+  // 画布偏移
+  offset?: Partial<Position>
 }
 
 export type RequiredOptions = DeepRequired<Options>
-export type DrawOptions = Pick<RequiredOptions, 'tick' | 'smallTick' | 'label'>
+export type DrawOptions = Pick<RequiredOptions, 'tick' | 'smallTick' | 'label' | 'offset'>
 export interface Scale {
   step: typeof Steps[number]
   // 刻度的宽度（px）

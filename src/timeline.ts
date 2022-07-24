@@ -61,7 +61,7 @@ export class TimelineAxis {
 }
 
 function update(instance: TimelineAxis, options: RequiredOptions) {
-  const { width, height, tick, smallTick, label } = options
+  const { width, height, tick, smallTick, label, offset } = options
   const canvas = instance.dom
   const scale = instance.scale
 
@@ -70,7 +70,7 @@ function update(instance: TimelineAxis, options: RequiredOptions) {
   canvas.height = height
   if (scale) {
     draw(canvas, scale.width, scale.second, {
-      tick, smallTick, label,
+      tick, smallTick, label, offset,
     })
   }
 }
