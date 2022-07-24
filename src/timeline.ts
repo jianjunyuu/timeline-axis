@@ -61,13 +61,16 @@ export class TimelineAxis {
 }
 
 function update(instance: TimelineAxis, options: RequiredOptions) {
-  const { width, height } = options
+  const { width, height, tick, smallTick, label } = options
   const canvas = instance.dom
   const scale = instance.scale
 
   // 设置画布的大小
   canvas.width = width
   canvas.height = height
-  if (scale)
-    draw(canvas, scale.width, scale.second)
+  if (scale) {
+    draw(canvas, scale.width, scale.second, {
+      tick, smallTick, label,
+    })
+  }
 }

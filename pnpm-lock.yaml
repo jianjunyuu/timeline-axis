@@ -15,6 +15,7 @@ importers:
       lodash-es: ^4.17.21
       pnpm: ^7.5.0
       rimraf: ^3.0.2
+      ts-essentials: ^9.2.0
       typescript: ^4.7.4
       unbuild: ^0.7.4
       vite: ^3.0.2
@@ -32,6 +33,7 @@ importers:
       esno: 0.16.3
       pnpm: 7.5.0
       rimraf: 3.0.2
+      ts-essentials: 9.2.0_typescript@4.7.4
       typescript: 4.7.4
       unbuild: 0.7.4
       vite: 3.0.2
@@ -3247,6 +3249,14 @@ packages:
     engines: {node: '>=8.0'}
     dependencies:
       is-number: 7.0.0
+    dev: true
+
+  /ts-essentials/9.2.0_typescript@4.7.4:
+    resolution: {integrity: sha512-HLl+am6q+ulOWcjUFghpIQXXyaH0hVTnFTVWNqwz1iDxyN+t+lwDfqPB5FmPUTFw3J+y26UR3hNGmK/1jehokA==}
+    peerDependencies:
+      typescript: '>=4.1.0'
+    dependencies:
+      typescript: 4.7.4
     dev: true
 
   /tsconfig-paths/3.14.1:

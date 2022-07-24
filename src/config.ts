@@ -21,4 +21,21 @@ export const config: RequiredOptions = {
   width: 500,
   height: 18,
   duration: 10,
+  tick: {
+    width: 1,
+    height: 18,
+    color: 'rgba(151,158,167,1)',
+  },
+  smallTick: {
+    width: 1,
+    height: 5,
+    color: 'rgba(151,158,167,1)',
+  },
+  label: {
+    offset: {
+      x: 8,
+      y: 17,
+    },
+    style: 'rgba(151,158,167,1)',
+  },
 }
