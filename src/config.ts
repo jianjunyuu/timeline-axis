@@ -42,4 +42,5 @@ export const config: RequiredOptions = {
     },
     style: 'rgba(151,158,167,1)',
   },
+  onScaleChange() {},
 }

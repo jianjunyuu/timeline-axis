@@ -53,6 +53,8 @@ export interface Options {
   label?: TickLabel
   // 画布偏移
   offset?: Partial<Position>
+  // 比例变化
+  onScaleChange?: (newValue: Scale, oldValue: Scale | undefined) => void
 }
 
 export type RequiredOptions = DeepRequired<Options>

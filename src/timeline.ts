@@ -25,10 +25,10 @@ export class TimelineAxis {
     this.options = merge({}, this.options, options)
 
     // 根据新的scales计算新的索引值
-    const scale = this.scale
+    const oldScale = this.scale
     this.scales = getScales(this.options.duration)
     const index = this.scales.findIndex((obj) => {
-      return obj.step === scale?.step && obj.second === scale.second && obj.width === scale.width
+      return isSome(obj, oldScale)
     })
     this.scaleIndex = index < 0
       ? 0
@@ -48,6 +48,9 @@ export class TimelineAxis {
   }
 
   zoomTo(value: number) {
+    const oldScale = this.scale
+    if (value === this.scaleIndex)
+      return
     if (value < 0)
       value = 0
 
@@ -55,7 +58,13 @@ export class TimelineAxis {
       value = this.scales.length - 1
 
     this.scaleIndex = value
-
+    const newScale = this.scale
+    if (!isSome(newScale, oldScale)) {
+      // Tips: 受DeepRequired的影响，onScaleChange的类型由 () => {} -> {}
+      // 故在此断言
+      const onScaleChange = this.options.onScaleChange as Options['onScaleChange']
+      onScaleChange?.(this.scale!, oldScale)
+    }
     this.setOptions({})
   }
 }
@@ -73,4 +82,8 @@ function update(instance: TimelineAxis, options: RequiredOptions) {
       tick, smallTick, label, offset,
     })
   }
+}
+
+function isSome(scale1: Scale | undefined, scale2: Scale | undefined) {
+  return scale1?.step === scale2?.step && scale1?.second === scale2?.second && scale1?.width === scale2?.width
 }
