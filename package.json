@@ -46,7 +46,7 @@
     "start": "esno src/index.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "prepare": "husky install"
+    "prepare": "npx husky install"
   },
   "dependencies": {
     "lodash-es": "^4.17.21"
