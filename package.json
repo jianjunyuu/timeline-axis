@@ -1,5 +1,5 @@
 {
-  "name": "pkg-name",
+  "name": "timeline-axis",
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@7.2.1",
@@ -7,12 +7,12 @@
   "author": "Anthony Fu <anthonyfu117@hotmail.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/antjianjunyuufu",
-  "homepage": "https://github.com/jianjunyuu/pkg-name#readme",
+  "homepage": "https://github.com/jianjunyuu/timeline-axis#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jianjunyuu/pkg-name.git"
+    "url": "git+https://github.com/jianjunyuu/timeline-axis.git"
   },
-  "bugs": "https://github.com/jianjunyuu/pkg-name/issues",
+  "bugs": "https://github.com/jianjunyuu/timeline-axis/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {
