@@ -28,7 +28,7 @@ export interface TickStyle {
   // 刻度线高
   height?: number
   // 刻度线颜色
-  color?: CanvasFillStrokeStyles['strokeStyle']
+  color?: string // CanvasFillStrokeStyles['strokeStyle']
   // 刻度线宽度
   width?: number
 }
@@ -36,7 +36,7 @@ export interface TickStyle {
 export interface TickLabel {
   // 时间文字的偏移量
   offset?: Partial<Position>
-  style?: CanvasFillStrokeStyles['fillStyle']
+  style?: string // CanvasFillStrokeStyles['fillStyle']
 }
 export interface Options {
   // 画布宽度
