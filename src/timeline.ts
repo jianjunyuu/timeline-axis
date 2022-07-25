@@ -59,12 +59,9 @@ export class TimelineAxis {
 
     this.scaleIndex = value
     const newScale = this.scale
-    if (!isSome(newScale, oldScale)) {
-      // Tips: 受DeepRequired的影响，onScaleChange的类型由 () => {} -> {}
-      // 故在此断言
-      const onScaleChange = this.options.onScaleChange as Options['onScaleChange']
-      onScaleChange?.(this.scale!, oldScale)
-    }
+    if (!isSome(newScale, oldScale))
+      this.options.onScaleChange(this.scale!, oldScale)
+
     this.setOptions({})
   }
 }
