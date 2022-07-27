@@ -57,7 +57,7 @@ export interface Options {
   // 画布偏移
   offset?: Partial<Position>
   // 比例变化
-  onScaleChange?: (newValue: Scale, oldValue: Scale | undefined) => void
+  onScaleChange?: (newValue: Scale, oldValue: Scale | null) => void
 }
 
 export type RequiredOptions = DeepRequired<Options>

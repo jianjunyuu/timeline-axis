@@ -9,30 +9,39 @@ export class TimelineAxis {
   private options: RequiredOptions = config
   private scales: Scale[] = []
   private scaleIndex = 0
+  private nextScaleIndex = -1
   constructor(options: Options) {
     this.setOptions(options)
   }
 
-  get zoomable() {
-    return true
-  }
-
-  get scale(): Scale | undefined {
+  get scale(): Scale | null {
     return this.scales[this.scaleIndex]
   }
 
   setOptions(options: Options) {
     this.options = merge({}, this.options, options)
 
-    // 根据新的scales计算新的索引值
     const oldScale = this.scale
-    this.scales = getScales(this.options.duration)
-    const index = this.scales.findIndex((obj) => {
-      return isSome(obj, oldScale)
-    })
-    this.scaleIndex = index < 0
-      ? 0
-      : index
+    if (typeof options.duration !== 'undefined') {
+      // 根据新的scales计算新的索引值
+      this.scales = getScales(this.options.duration)
+    }
+    if (this.nextScaleIndex >= 0) {
+      this.scaleIndex = this.nextScaleIndex
+      this.nextScaleIndex = -1
+    }
+    else {
+      const index = this.scales.findIndex((obj) => {
+        return isSome(obj, oldScale)
+      })
+      this.scaleIndex = index < 0
+        ? 0
+        : index
+    }
+
+    const newScale = this.scale!
+    if (!isSome(newScale, oldScale))
+      this.options.onScaleChange(newScale, oldScale)
 
     update(this, this.options)
   }
@@ -48,7 +57,6 @@ export class TimelineAxis {
   }
 
   zoomTo(value: number) {
-    const oldScale = this.scale
     if (value === this.scaleIndex)
       return
     if (value < 0)
@@ -57,10 +65,7 @@ export class TimelineAxis {
     else if (value > this.scales.length - 1)
       value = this.scales.length - 1
 
-    this.scaleIndex = value
-    const newScale = this.scale
-    if (!isSome(newScale, oldScale))
-      this.options.onScaleChange(this.scale!, oldScale)
+    this.nextScaleIndex = value
 
     this.setOptions({})
   }
@@ -81,6 +86,6 @@ function update(instance: TimelineAxis, options: RequiredOptions) {
   }
 }
 
-function isSome(scale1: Scale | undefined, scale2: Scale | undefined) {
+function isSome(scale1: Scale | null, scale2: Scale | null) {
   return scale1?.step === scale2?.step && scale1?.second === scale2?.second && scale1?.width === scale2?.width
 }
