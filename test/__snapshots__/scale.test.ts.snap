@@ -1,0 +1,1642 @@
+// Vitest Snapshot v1
+
+exports[`get scales by duration(second) > getScales(1) -> %j 1`] = `
+[
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 15,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 25,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 40,
+  },
+]
+`;
+
+exports[`get scales by duration(second) > getScales(2) -> %j 1`] = `
+[
+  {
+    "second": 2,
+    "step": 2,
+    "text": "2秒",
+    "width": 20,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 15,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 25,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 40,
+  },
+]
+`;
+
+exports[`get scales by duration(second) > getScales(3) -> %j 1`] = `
+[
+  {
+    "second": 3,
+    "step": 3,
+    "text": "3秒",
+    "width": 23,
+  },
+  {
+    "second": 2,
+    "step": 2,
+    "text": "2秒",
+    "width": 20,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 15,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 25,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 40,
+  },
+]
+`;
+
+exports[`get scales by duration(second) > getScales(4) -> %j 1`] = `
+[
+  {
+    "second": 3,
+    "step": 3,
+    "text": "3秒",
+    "width": 23,
+  },
+  {
+    "second": 2,
+    "step": 2,
+    "text": "2秒",
+    "width": 20,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 15,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 25,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 40,
+  },
+]
+`;
+
+exports[`get scales by duration(second) > getScales(5) -> %j 1`] = `
+[
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 20,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 30,
+  },
+  {
+    "second": 3,
+    "step": 3,
+    "text": "3秒",
+    "width": 23,
+  },
+  {
+    "second": 2,
+    "step": 2,
+    "text": "2秒",
+    "width": 20,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 15,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 25,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 40,
+  },
+]
+`;
+
+exports[`get scales by duration(second) > getScales(6) -> %j 1`] = `
+[
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 20,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 30,
+  },
+  {
+    "second": 3,
+    "step": 3,
+    "text": "3秒",
+    "width": 23,
+  },
+  {
+    "second": 2,
+    "step": 2,
+    "text": "2秒",
+    "width": 20,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 15,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 25,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 40,
+  },
+]
+`;
+
+exports[`get scales by duration(second) > getScales(9) -> %j 1`] = `
+[
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 20,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 30,
+  },
+  {
+    "second": 3,
+    "step": 3,
+    "text": "3秒",
+    "width": 23,
+  },
+  {
+    "second": 2,
+    "step": 2,
+    "text": "2秒",
+    "width": 20,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 15,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 25,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 40,
+  },
+]
+`;
+
+exports[`get scales by duration(second) > getScales(10) -> %j 1`] = `
+[
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 12,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 15,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 20,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 30,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 20,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 30,
+  },
+  {
+    "second": 3,
+    "step": 3,
+    "text": "3秒",
+    "width": 23,
+  },
+  {
+    "second": 2,
+    "step": 2,
+    "text": "2秒",
+    "width": 20,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 15,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 25,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 40,
+  },
+]
+`;
+
+exports[`get scales by duration(second) > getScales(19) -> %j 1`] = `
+[
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 12,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 15,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 20,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 30,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 20,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 30,
+  },
+  {
+    "second": 3,
+    "step": 3,
+    "text": "3秒",
+    "width": 23,
+  },
+  {
+    "second": 2,
+    "step": 2,
+    "text": "2秒",
+    "width": 20,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 15,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 25,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 40,
+  },
+]
+`;
+
+exports[`get scales by duration(second) > getScales(20) -> %j 1`] = `
+[
+  {
+    "second": 20,
+    "step": 20,
+    "text": "20秒",
+    "width": 20,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 12,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 15,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 20,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 30,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 20,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 30,
+  },
+  {
+    "second": 3,
+    "step": 3,
+    "text": "3秒",
+    "width": 23,
+  },
+  {
+    "second": 2,
+    "step": 2,
+    "text": "2秒",
+    "width": 20,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 15,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 25,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 40,
+  },
+]
+`;
+
+exports[`get scales by duration(second) > getScales(30) -> %j 1`] = `
+[
+  {
+    "second": 30,
+    "step": 30,
+    "text": "30秒",
+    "width": 23,
+  },
+  {
+    "second": 20,
+    "step": 20,
+    "text": "20秒",
+    "width": 20,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 12,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 15,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 20,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 30,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 20,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 30,
+  },
+  {
+    "second": 3,
+    "step": 3,
+    "text": "3秒",
+    "width": 23,
+  },
+  {
+    "second": 2,
+    "step": 2,
+    "text": "2秒",
+    "width": 20,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 15,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 25,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 40,
+  },
+]
+`;
+
+exports[`get scales by duration(second) > getScales(59) -> %j 1`] = `
+[
+  {
+    "second": 30,
+    "step": 30,
+    "text": "30秒",
+    "width": 23,
+  },
+  {
+    "second": 20,
+    "step": 20,
+    "text": "20秒",
+    "width": 20,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 12,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 15,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 20,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 30,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 20,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 30,
+  },
+  {
+    "second": 3,
+    "step": 3,
+    "text": "3秒",
+    "width": 23,
+  },
+  {
+    "second": 2,
+    "step": 2,
+    "text": "2秒",
+    "width": 20,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 15,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 25,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 40,
+  },
+]
+`;
+
+exports[`get scales by duration(second) > getScales(60) -> %j 1`] = `
+[
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 15,
+  },
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 25,
+  },
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 40,
+  },
+  {
+    "second": 30,
+    "step": 30,
+    "text": "30秒",
+    "width": 23,
+  },
+  {
+    "second": 20,
+    "step": 20,
+    "text": "20秒",
+    "width": 20,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 12,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 15,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 20,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 30,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 20,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 30,
+  },
+  {
+    "second": 3,
+    "step": 3,
+    "text": "3秒",
+    "width": 23,
+  },
+  {
+    "second": 2,
+    "step": 2,
+    "text": "2秒",
+    "width": 20,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 15,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 25,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 40,
+  },
+]
+`;
+
+exports[`get scales by duration(second) > getScales(61) -> %j 1`] = `
+[
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 15,
+  },
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 25,
+  },
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 40,
+  },
+  {
+    "second": 30,
+    "step": 30,
+    "text": "30秒",
+    "width": 23,
+  },
+  {
+    "second": 20,
+    "step": 20,
+    "text": "20秒",
+    "width": 20,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 12,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 15,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 20,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 30,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 20,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 30,
+  },
+  {
+    "second": 3,
+    "step": 3,
+    "text": "3秒",
+    "width": 23,
+  },
+  {
+    "second": 2,
+    "step": 2,
+    "text": "2秒",
+    "width": 20,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 15,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 25,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 40,
+  },
+]
+`;
+
+exports[`get scales by duration(second) > getScales(90) -> %j 1`] = `
+[
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 15,
+  },
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 25,
+  },
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 40,
+  },
+  {
+    "second": 30,
+    "step": 30,
+    "text": "30秒",
+    "width": 23,
+  },
+  {
+    "second": 20,
+    "step": 20,
+    "text": "20秒",
+    "width": 20,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 12,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 15,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 20,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 30,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 20,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 30,
+  },
+  {
+    "second": 3,
+    "step": 3,
+    "text": "3秒",
+    "width": 23,
+  },
+  {
+    "second": 2,
+    "step": 2,
+    "text": "2秒",
+    "width": 20,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 15,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 25,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 40,
+  },
+]
+`;
+
+exports[`get scales by duration(second) > getScales(91) -> %j 1`] = `
+[
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 15,
+  },
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 25,
+  },
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 40,
+  },
+  {
+    "second": 30,
+    "step": 30,
+    "text": "30秒",
+    "width": 23,
+  },
+  {
+    "second": 20,
+    "step": 20,
+    "text": "20秒",
+    "width": 20,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 12,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 15,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 20,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 30,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 20,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 30,
+  },
+  {
+    "second": 3,
+    "step": 3,
+    "text": "3秒",
+    "width": 23,
+  },
+  {
+    "second": 2,
+    "step": 2,
+    "text": "2秒",
+    "width": 20,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 15,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 25,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 40,
+  },
+]
+`;
+
+exports[`get scales by duration(second) > getScales(120) -> %j 1`] = `
+[
+  {
+    "second": 120,
+    "step": 2,
+    "text": "2分",
+    "width": 20,
+  },
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 15,
+  },
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 25,
+  },
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 40,
+  },
+  {
+    "second": 30,
+    "step": 30,
+    "text": "30秒",
+    "width": 23,
+  },
+  {
+    "second": 20,
+    "step": 20,
+    "text": "20秒",
+    "width": 20,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 12,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 15,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 20,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 30,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 20,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 30,
+  },
+  {
+    "second": 3,
+    "step": 3,
+    "text": "3秒",
+    "width": 23,
+  },
+  {
+    "second": 2,
+    "step": 2,
+    "text": "2秒",
+    "width": 20,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 15,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 25,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 40,
+  },
+]
+`;
+
+exports[`get scales by duration(second) > getScales(121) -> %j 1`] = `
+[
+  {
+    "second": 120,
+    "step": 2,
+    "text": "2分",
+    "width": 20,
+  },
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 15,
+  },
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 25,
+  },
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 40,
+  },
+  {
+    "second": 30,
+    "step": 30,
+    "text": "30秒",
+    "width": 23,
+  },
+  {
+    "second": 20,
+    "step": 20,
+    "text": "20秒",
+    "width": 20,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 12,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 15,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 20,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 30,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 20,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 30,
+  },
+  {
+    "second": 3,
+    "step": 3,
+    "text": "3秒",
+    "width": 23,
+  },
+  {
+    "second": 2,
+    "step": 2,
+    "text": "2秒",
+    "width": 20,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 15,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 25,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 40,
+  },
+]
+`;
+
+exports[`get scales by duration(second) > getScales(1810) -> %j 1`] = `
+[
+  {
+    "second": 1800,
+    "step": 30,
+    "text": "30分",
+    "width": 23,
+  },
+  {
+    "second": 1200,
+    "step": 20,
+    "text": "20分",
+    "width": 20,
+  },
+  {
+    "second": 600,
+    "step": 10,
+    "text": "10分",
+    "width": 12,
+  },
+  {
+    "second": 600,
+    "step": 10,
+    "text": "10分",
+    "width": 15,
+  },
+  {
+    "second": 600,
+    "step": 10,
+    "text": "10分",
+    "width": 20,
+  },
+  {
+    "second": 600,
+    "step": 10,
+    "text": "10分",
+    "width": 30,
+  },
+  {
+    "second": 300,
+    "step": 5,
+    "text": "5分",
+    "width": 20,
+  },
+  {
+    "second": 300,
+    "step": 5,
+    "text": "5分",
+    "width": 30,
+  },
+  {
+    "second": 180,
+    "step": 3,
+    "text": "3分",
+    "width": 23,
+  },
+  {
+    "second": 120,
+    "step": 2,
+    "text": "2分",
+    "width": 20,
+  },
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 15,
+  },
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 25,
+  },
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 40,
+  },
+  {
+    "second": 30,
+    "step": 30,
+    "text": "30秒",
+    "width": 23,
+  },
+  {
+    "second": 20,
+    "step": 20,
+    "text": "20秒",
+    "width": 20,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 12,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 15,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 20,
+  },
+  {
+    "second": 10,
+    "step": 10,
+    "text": "10秒",
+    "width": 30,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 20,
+  },
+  {
+    "second": 5,
+    "step": 5,
+    "text": "5秒",
+    "width": 30,
+  },
+  {
+    "second": 3,
+    "step": 3,
+    "text": "3秒",
+    "width": 23,
+  },
+  {
+    "second": 2,
+    "step": 2,
+    "text": "2秒",
+    "width": 20,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 15,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 25,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 40,
+  },
+]
+`;
+
+exports[`get scales by duration(second) > getScales(3600) -> %j 1`] = `
+[
+  {
+    "second": 3600,
+    "step": 1,
+    "text": "1时",
+    "width": 30,
+  },
+  {
+    "second": 1800,
+    "step": 30,
+    "text": "30分",
+    "width": 23,
+  },
+  {
+    "second": 1200,
+    "step": 20,
+    "text": "20分",
+    "width": 20,
+  },
+  {
+    "second": 600,
+    "step": 10,
+    "text": "10分",
+    "width": 12,
+  },
+  {
+    "second": 600,
+    "step": 10,
+    "text": "10分",
+    "width": 15,
+  },
+  {
+    "second": 600,
+    "step": 10,
+    "text": "10分",
+    "width": 20,
+  },
+  {
+    "second": 600,
+    "step": 10,
+    "text": "10分",
+    "width": 30,
+  },
+  {
+    "second": 300,
+    "step": 5,
+    "text": "5分",
+    "width": 20,
+  },
+  {
+    "second": 300,
+    "step": 5,
+    "text": "5分",
+    "width": 30,
+  },
+  {
+    "second": 180,
+    "step": 3,
+    "text": "3分",
+    "width": 23,
+  },
+  {
+    "second": 120,
+    "step": 2,
+    "text": "2分",
+    "width": 20,
+  },
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 15,
+  },
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 25,
+  },
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 40,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 15,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 25,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 40,
+  },
+]
+`;
+
+exports[`get scales by duration(second) > getScales(3601) -> %j 1`] = `
+[
+  {
+    "second": 3600,
+    "step": 1,
+    "text": "1时",
+    "width": 30,
+  },
+  {
+    "second": 1800,
+    "step": 30,
+    "text": "30分",
+    "width": 23,
+  },
+  {
+    "second": 1200,
+    "step": 20,
+    "text": "20分",
+    "width": 20,
+  },
+  {
+    "second": 600,
+    "step": 10,
+    "text": "10分",
+    "width": 12,
+  },
+  {
+    "second": 600,
+    "step": 10,
+    "text": "10分",
+    "width": 15,
+  },
+  {
+    "second": 600,
+    "step": 10,
+    "text": "10分",
+    "width": 20,
+  },
+  {
+    "second": 600,
+    "step": 10,
+    "text": "10分",
+    "width": 30,
+  },
+  {
+    "second": 300,
+    "step": 5,
+    "text": "5分",
+    "width": 20,
+  },
+  {
+    "second": 300,
+    "step": 5,
+    "text": "5分",
+    "width": 30,
+  },
+  {
+    "second": 180,
+    "step": 3,
+    "text": "3分",
+    "width": 23,
+  },
+  {
+    "second": 120,
+    "step": 2,
+    "text": "2分",
+    "width": 20,
+  },
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 15,
+  },
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 25,
+  },
+  {
+    "second": 60,
+    "step": 1,
+    "text": "1分",
+    "width": 40,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 15,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 25,
+  },
+  {
+    "second": 1,
+    "step": 1,
+    "text": "1秒",
+    "width": 40,
+  },
+]
+`;

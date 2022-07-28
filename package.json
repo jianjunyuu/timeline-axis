@@ -60,6 +60,8 @@
     "bumpp": "^8.2.1",
     "eslint": "^8.19.0",
     "esno": "^0.16.3",
+    "happy-dom": "^6.0.4",
+    "jest-canvas-mock": "^2.4.0",
     "pnpm": "^7.5.0",
     "rimraf": "^3.0.2",
     "typescript": "^4.7.4",
