@@ -59,6 +59,8 @@ export interface Options {
   offset?: Partial<Position>
   // 比例变化
   onScaleChange?: (newValue: Scale, oldValue: Scale | null) => void
+  // 执行更新时间
+  onUpdate?: (options: { scale: Scale | null; index: number; scales: Scale[] }) => void
 }
 
 export type RequiredOptions = DeepRequired<Options>

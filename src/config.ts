@@ -44,4 +44,5 @@ export const config: RequiredOptions = {
     font: '',
   },
   onScaleChange() {},
+  onUpdate() {},
 }

@@ -44,6 +44,11 @@ export class TimelineAxis {
       this.options.onScaleChange(newScale, oldScale)
 
     update(this, this.options)
+    this.options.onUpdate({
+      scale: this.scale,
+      scales: this.scales,
+      index: this.scaleIndex,
+    })
   }
 
   // 放大
