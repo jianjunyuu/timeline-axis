@@ -41,6 +41,7 @@ export const config: RequiredOptions = {
       y: 17,
     },
     style: 'rgba(151,158,167,1)',
+    font: '',
   },
   onScaleChange() {},
 }

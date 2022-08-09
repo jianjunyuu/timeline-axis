@@ -29,7 +29,7 @@ export function draw(canvas: HTMLCanvasElement, stepWidth: number, stepSecond: n
           x: afterX + options.label.offset.x,
           y: options.label.offset.y,
         },
-        options.label.style,
+        options.label,
       )
     }
 
@@ -68,7 +68,7 @@ function drawLine(canvas: HTMLCanvasElement, beginX: number, beginY: number, end
 function fill(value: number) {
   return value < 10 ? `0${value}` : `${value}`
 }
-function drawTimeLabel(canvas: HTMLCanvasElement, time: number, position: Position, style: Required<TickLabel>['style']) {
+function drawTimeLabel(canvas: HTMLCanvasElement, time: number, position: Position, labelStyle: Required<TickLabel>) {
   const date = new Date('2022-01-01 00:00:00')
   date.setTime(date.getTime() + time * 1000)
 
@@ -76,7 +76,9 @@ function drawTimeLabel(canvas: HTMLCanvasElement, time: number, position: Positi
   const label = `${hour > 0 ? `${fill(hour)}:` : ''}${fill(date.getMinutes())}:${fill(date.getSeconds())}`
   const context = canvas.getContext('2d')
   if (context) {
-    context.fillStyle = style
+    context.fillStyle = labelStyle.style
+    context.font = labelStyle.font
+
     context.fillText(label, position.x, position.y)
   }
 }

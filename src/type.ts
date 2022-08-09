@@ -40,6 +40,7 @@ export interface TickLabel {
   // 时间文字的偏移量
   offset?: Partial<Position>
   style?: string // CanvasFillStrokeStyles['fillStyle']
+  font?: CanvasTextDrawingStyles['font']
 }
 export interface Options {
   // 画布宽度
