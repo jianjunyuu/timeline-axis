@@ -1,58 +1,74 @@
-import type { DrawOptions, Position, TickLabel, TickStyle } from './type'
+import type { Position, RequiredTimelineOptions, Step, TickLabel, TickStyle } from './type'
 
-export function draw(canvas: HTMLCanvasElement, stepWidth: number, stepSecond: number, options: DrawOptions) {
+export function render(canvas: HTMLCanvasElement, options: RequiredTimelineOptions) {
   clear(canvas)
-  const { offset } = options
-  const bigStepWidth = stepWidth * 10
-  const addTickCount = Math.floor(offset.x / bigStepWidth)
-  const tickCount = Math.floor(canvas.width / bigStepWidth)
+  const { frameWidth, steps, offset, label, fps } = options
 
-  for (let index = addTickCount; index <= tickCount + addTickCount + 1; index++) {
-    const x = index * bigStepWidth - offset.x
-    const afterX = x < 0 ? canvas.width + x : x
-    const afterIndex = x < 0 ? index + tickCount : index
+  const step = getStep(steps, frameWidth)
 
-    if (index > 0 && x >= 0) {
-      drawLine(
-        canvas,
-        afterX,
-        0,
-        afterX,
-        options.tick.height,
-        options.tick.color,
-        options.tick.width,
-      )
-      drawTimeLabel(
-        canvas,
-        (afterIndex) * stepSecond,
-        {
-          x: afterX + options.label.offset.x,
-          y: options.label.offset.y,
-        },
-        options.label,
-      )
-    }
+  const stepWidth = step.frames * frameWidth
+  const tickWidth = stepWidth / (step.ticks + 1)
 
-    for (let k = 1; k < 10; k++) {
-      const sX = x + k * stepWidth
-      if (sX >= 0) {
-        drawLine(
-          canvas,
-          sX,
-          0,
-          sX,
-          options.smallTick.height,
-          options.smallTick.color,
-          options.smallTick.width,
-        )
+  const startStep = Math.floor(offset.x / stepWidth) - 1
+  let stepCount = Math.floor(canvas.width / stepWidth)
+
+  let index = startStep
+  while (index <= stepCount + startStep) {
+    const x = index * stepWidth - offset.x
+    if (x < 0)
+      stepCount += 1
+
+    const time = index * (step.frames / fps)
+
+    drawLine(
+      canvas,
+      x,
+      0,
+      x,
+      options.tick.height,
+      options.tick.color,
+      options.tick.width,
+    )
+
+    const frames = index * step.frames
+    const labelText = step.type === 'frame' && frames % fps !== 0 ? `${frames % fps}F` : getTimeLabel(time)
+
+    drawTimeLabel(
+      canvas,
+      labelText,
+      {
+        x: x + label.offset.x,
+        y: label.offset.y,
+      },
+      options.label,
+    )
+
+    if (step.ticks > 0) {
+      for (let k = 1; k <= step.ticks; k++) {
+        const sX = x + k * tickWidth
+        if (sX >= 0) {
+          drawLine(
+            canvas,
+            sX,
+            0,
+            sX,
+            options.smallTick.height,
+            options.smallTick.color,
+            options.smallTick.width,
+          )
+        }
       }
     }
+
+    index++
   }
 }
+
 function clear(canvas: HTMLCanvasElement) {
   const context = canvas.getContext('2d')
   context?.clearRect(0, 0, canvas.width, canvas.height)
 }
+
 function drawLine(canvas: HTMLCanvasElement, beginX: number, beginY: number, endX: number, endY: number, color: Required<TickStyle>['color'], lineWidth: number) {
   const context = canvas.getContext('2d')
   if (context) {
@@ -68,17 +84,39 @@ function drawLine(canvas: HTMLCanvasElement, beginX: number, beginY: number, end
 function fill(value: number) {
   return value < 10 ? `0${value}` : `${value}`
 }
-function drawTimeLabel(canvas: HTMLCanvasElement, time: number, position: Position, labelStyle: Required<TickLabel>) {
-  const date = new Date('2022-01-01 00:00:00')
-  date.setTime(date.getTime() + time * 1000)
 
-  const hour = date.getHours()
-  const label = `${hour > 0 ? `${fill(hour)}:` : ''}${fill(date.getMinutes())}:${fill(date.getSeconds())}`
+function drawTimeLabel(canvas: HTMLCanvasElement, text: string, position: Position, labelStyle: Required<TickLabel>) {
   const context = canvas.getContext('2d')
   if (context) {
     context.fillStyle = labelStyle.style
     context.font = labelStyle.font
 
-    context.fillText(label, position.x, position.y)
+    context.fillText(text, position.x, position.y)
   }
+}
+
+function getTimeLabel(second: number) {
+  const date = new Date('2022-01-01 00:00:00')
+  date.setTime(date.getTime() + second * 1000)
+
+  const hour = date.getHours()
+  const label = `${hour > 0 ? `${fill(hour)}:` : ''}${fill(date.getMinutes())}:${fill(date.getSeconds())}`
+
+  return label
+}
+
+function getStep(steps: Step[], frameWidth: number): Step {
+  let sp: Step = steps[0]
+  let si = 0
+  while (si < steps.length) {
+    const s = steps[si]
+    if (frameWidth > s.frameWidth)
+      return sp
+
+    else
+      sp = s
+
+    si++
+  }
+  return sp
 }

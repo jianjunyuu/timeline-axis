@@ -1,96 +1,53 @@
 import { merge } from 'lodash-es'
-import { draw } from './canvas'
-import { config } from './config'
-import { getScales } from './scale'
-import type { Options, RequiredOptions, Scale } from './type'
+import { render } from './canvas'
+import { timelineOptions } from './config'
+import type { RequiredTimelineOptions, TimelineOptions } from './type'
 
-export class TimelineAxis {
-  dom = document.createElement('canvas')
-  private options: RequiredOptions = config
-  private scales: Scale[] = []
-  private scaleIndex = 0
-  private nextScaleIndex = -1
-  constructor(options: Options) {
-    this.setOptions(options)
-  }
-
-  get scale(): Scale | null {
-    return this.scales[this.scaleIndex]
-  }
-
-  setOptions(options: Options) {
+export class Timeline {
+  #dom = document.createElement('canvas')
+  #container: HTMLElement
+  private options: RequiredTimelineOptions = timelineOptions
+  constructor(container: HTMLElement, options: TimelineOptions) {
     this.options = merge({}, this.options, options)
 
-    const oldScale = this.scale
-    if (typeof options.duration !== 'undefined') {
-      // 根据新的scales计算新的索引值
-      this.scales = getScales(this.options.duration)
-    }
-    if (this.nextScaleIndex >= 0) {
-      this.scaleIndex = this.nextScaleIndex
-      this.nextScaleIndex = -1
-    }
-    else {
-      const index = this.scales.findIndex((obj) => {
-        return isSome(obj, oldScale)
-      })
-      this.scaleIndex = index < 0
-        ? 0
-        : index
-    }
+    this.#dom.style.position = 'absolute'
+    this.#container = container
+    setPosition(this.#container)
+    this.#container.appendChild(this.#dom)
 
-    const newScale = this.scale!
-    if (!isSome(newScale, oldScale))
-      this.options.onScaleChange(newScale, oldScale)
+    // TODO 监听容器的宽度变化，并更新画布的宽度
 
-    update(this, this.options)
-    this.options.onUpdate({
-      scale: this.scale,
-      scales: this.scales,
-      index: this.scaleIndex,
-    })
+    this.#update()
   }
 
-  // 放大
-  zoomIn() {
-    this.zoomTo(this.scaleIndex + 1)
+  setFrameWidth(width: number) {
+    this.options.frameWidth = width
+    this.#update()
   }
 
-  // 缩小
-  zoomOut() {
-    this.zoomTo(this.scaleIndex - 1)
+  setOffset(x: number) {
+    this.options.offset.x = x
+    this.#update()
   }
 
-  zoomTo(value: number) {
-    if (value === this.scaleIndex)
-      return
-    if (value < 0)
-      value = 0
+  setHeight(height: number) {
+    this.options.height = height
+    this.#update()
+  }
 
-    else if (value > this.scales.length - 1)
-      value = this.scales.length - 1
+  #update() {
+    const { height } = this.options
+    this.#container.style.height = `${height}px`
+    const rect = this.#container.getBoundingClientRect()
+    this.#dom.width = rect.width
+    this.#dom.height = rect.height
 
-    this.nextScaleIndex = value
-
-    this.setOptions({})
+    render(this.#dom, this.options)
   }
 }
 
-function update(instance: TimelineAxis, options: RequiredOptions) {
-  const { width, height, tick, smallTick, label, offset } = options
-  const canvas = instance.dom
-  const scale = instance.scale
-
-  // 设置画布的大小
-  canvas.width = width
-  canvas.height = height
-  if (scale) {
-    draw(canvas, scale.width, scale.second, {
-      tick, smallTick, label, offset,
-    })
-  }
-}
-
-function isSome(scale1: Scale | null, scale2: Scale | null) {
-  return scale1?.step === scale2?.step && scale1?.second === scale2?.second && scale1?.width === scale2?.width
+function setPosition(el: HTMLElement) {
+  const style = window.getComputedStyle(el)
+  if (style.position === 'static')
+    el.style.position = 'relative'
 }

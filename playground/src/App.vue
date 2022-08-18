@@ -1,59 +1,37 @@
 <script setup lang="ts">
 import { onMounted, ref, watchEffect } from 'vue'
-import { TimelineAxis } from 'timeline-axis'
+import { Timeline } from 'timeline-axis'
 
+let timeline: Timeline | null = null
 const timelineRef = ref<HTMLElement>()
-// 初始化刻度
-const initalValue = ref(2)
-// 新增刻度值
-const additionalValue = ref(0)
-
-const axis = new TimelineAxis({
-  width: window.innerWidth,
-  height: 18,
-})
+const frameWidth = ref(300)
+const scrollLeft = ref(0)
 onMounted(() => {
-  timelineRef.value?.appendChild(axis.dom)
+  timeline = new Timeline(timelineRef.value!, {
+    height: 18,
+    offset: {
+      x: 0,
+    },
+  })
 
   watchEffect(() => {
-    axis.setOptions({
-      duration: Number(initalValue.value),
-    })
+    timeline?.setFrameWidth(frameWidth.value)
+  })
+
+  watchEffect(() => {
+    timeline?.setOffset(scrollLeft.value)
   })
 })
-
-function handleScale(value: number) {
-  if (value > 0)
-    axis.zoomIn()
-  else
-    axis.zoomOut()
-}
-
-function addTo() {
-  initalValue.value += Number(additionalValue.value)
-  additionalValue.value = 0
-}
 </script>
 
 <template>
   <div ref="timelineRef" class="timeline" />
+  <br>
+  <div>frameWidth: {{ frameWidth }}</div>
+  <input v-model="frameWidth" style="width: 100%" type="range" :min="0.1" :max="300" :step="0.01">
 
-  <input v-model="initalValue" aria-controls="">
-
-  <div>
-    <button @click="handleScale(-1)">
-      click -
-    </button>
-    Scale {{ 0 }}
-    <button @click="handleScale(1)">
-      click +
-    </button>
-  </div>
-  <input v-model="additionalValue">
-
-  <button @click="addTo">
-    add
-  </button>
+  <div>scrollLeft: {{ scrollLeft }}</div>
+  <input v-model="scrollLeft" style="width: 100%" type="range" :min="0" :max="3000" :step="1">
 </template>
 
 <style>
