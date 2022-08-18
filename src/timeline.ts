@@ -1,4 +1,5 @@
 import { merge } from 'lodash-es'
+import ResizeObserver from 'resize-observer-polyfill'
 import { render } from './canvas'
 import { timelineOptions } from './config'
 import type { RequiredTimelineOptions, TimelineOptions } from './type'
@@ -15,7 +16,12 @@ export class Timeline {
     setPosition(this.#container)
     this.#container.appendChild(this.#dom)
 
-    // TODO 监听容器的宽度变化，并更新画布的宽度
+    // 监听容器的宽度变化，并更新画布的宽度
+    const ro = new ResizeObserver(() => {
+      this.#update()
+    })
+
+    ro.observe(this.#container)
 
     this.#update()
   }
