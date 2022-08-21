@@ -21,7 +21,20 @@ onMounted(() => {
   watchEffect(() => {
     timeline?.setOffset(scrollLeft.value)
   })
+
+  document.body.addEventListener('wheel', onWheel, { passive: false })
 })
+
+function onWheel(e: WheelEvent) {
+  e.preventDefault()
+  if (e.ctrlKey) {
+    if (timeline && e.deltaY > 0)
+      frameWidth.value = frameWidth.value - 2
+
+    if (timeline && e.deltaY < 0)
+      frameWidth.value = frameWidth.value + 2
+  }
+}
 </script>
 
 <template>
