@@ -1,5 +1,3 @@
-import type { Steps } from './config'
-
 /** Like Required but recursive */
 export declare type DeepRequired<T> =
 T extends (...args: any[]) => any
@@ -42,13 +40,23 @@ export interface TickLabel {
   style?: string // CanvasFillStrokeStyles['fillStyle']
   font?: CanvasTextDrawingStyles['font']
 }
-export interface Options {
-  // 画布宽度
-  width?: number
-  // 画布宽度
-  height?: number
-  // 时长(秒)
-  duration?: number
+
+export interface Step {
+  // 类型
+  type: 'frame' | 's' | 'm'
+  // 帧宽
+  frameWidth: number
+  // 帧数：最小1
+  frames: number
+  // 刻度数
+  ticks: number
+}
+
+export interface TimelineOptions {
+  // 帧率
+  fps?: number
+  // 帧宽
+  frameWidth?: number
   // 刻度样式
   tick?: TickStyle
   // 细刻度样式
@@ -57,18 +65,10 @@ export interface Options {
   label?: TickLabel
   // 画布偏移
   offset?: Partial<Position>
-  // 比例变化
-  onScaleChange?: (newValue: Scale, oldValue: Scale | null) => void
-  // 执行更新时间
-  onUpdate?: (options: { scale: Scale | null; index: number; scales: Scale[] }) => void
+  // 刻度配置
+  steps?: Step[]
+  // 画布高度
+  height?: number
 }
 
-export type RequiredOptions = DeepRequired<Options>
-export type DrawOptions = Pick<RequiredOptions, 'tick' | 'smallTick' | 'label' | 'offset'>
-export interface Scale {
-  step: typeof Steps[number]
-  // 刻度的宽度（px）
-  width: number
-  second: number
-  text: string
-}
+export type RequiredTimelineOptions = DeepRequired<TimelineOptions>

@@ -49,7 +49,8 @@
     "prepare": "npx husky install"
   },
   "dependencies": {
-    "lodash-es": "^4.17.21"
+    "lodash-es": "^4.17.21",
+    "resize-observer-polyfill": "^1.5.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.2",

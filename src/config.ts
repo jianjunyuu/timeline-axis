@@ -1,30 +1,82 @@
-import type { RequiredOptions } from './type'
+import type { RequiredTimelineOptions, Step } from './type'
 
-export const Steps = [1, 2, 3, 5, 10, 20, 30] as const
-/**
- * min 1(40,25,15) 2(20) 3(23) 5(30,20) 10(30,20,15,12) max
- * 1s 2s 3s 5s 10s 20s 30s
- * 1m 2m 3m 5m 10m 20m 30m
- * 1h 2h 3h 6h 12h 24h
- */
-export const StepWidthMap: Record<typeof Steps[number], number[]> = {
-  1: [40, 25, 15],
-  2: [20],
-  3: [23],
-  5: [30, 20],
-  10: [30, 20, 15, 12],
-  20: [20],
-  30: [23],
-}
+const steps: Step[] = [
+  {
+    type: 'frame',
+    frameWidth: 300,
+    frames: 1,
+    ticks: 0,
+  },
+  {
+    type: 'frame',
+    frameWidth: 200,
+    frames: 2,
+    ticks: 1,
+  },
+  {
+    type: 'frame',
+    frameWidth: 100,
+    frames: 4,
+    ticks: 1,
+  },
+  {
+    type: 'frame',
+    frameWidth: 50,
+    frames: 10,
+    ticks: 9,
+  },
+  {
+    type: 's',
+    frameWidth: 20,
+    frames: 30, // 1s
+    ticks: 9,
+  },
+  {
+    type: 's',
+    frameWidth: 10,
+    frames: 60, // 2s
+    ticks: 9,
+  },
+  {
+    type: 's',
+    frameWidth: 5,
+    frames: 90, // 3s
+    ticks: 9,
+  },
+  {
+    type: 's',
+    frameWidth: 1.5,
+    frames: 300, // 10
+    ticks: 9,
+  },
+  {
+    type: 's',
+    frameWidth: 0.5,
+    frames: 600, // 10
+    ticks: 9,
+  },
+  {
+    type: 's',
+    frameWidth: 0.2,
+    frames: 900, // 10
+    ticks: 9,
+  },
+  {
+    type: 'm',
+    frameWidth: 0.1,
+    frames: 30 * 60, // 10
+    ticks: 9,
+  },
+]
 
-export const config: RequiredOptions = {
+export const timelineOptions: RequiredTimelineOptions = {
+  fps: 30,
+  frameWidth: 1,
+  height: 18,
   offset: {
     x: 0,
     y: 0,
   },
-  width: 500,
-  height: 18,
-  duration: 10,
   tick: {
     width: 1,
     height: 18,
@@ -43,6 +95,5 @@ export const config: RequiredOptions = {
     style: 'rgba(151,158,167,1)',
     font: '',
   },
-  onScaleChange() {},
-  onUpdate() {},
+  steps,
 }
